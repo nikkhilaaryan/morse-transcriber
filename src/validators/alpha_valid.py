@@ -12,7 +12,9 @@ Returns:
 - True if valid.
 - Raises ValueError or returns False (depending on usage) if invalid.
 """
-from src.converters.alpha_morse import ALPHA_MORSE
+from src.converters.alpha_morse import alpha_to_morse
+from src.mappings.morse_map import MORSE_MAP
+
 
 def is_valid_alpha(text: str) -> bool:
     """
@@ -30,6 +32,6 @@ def is_valid_alpha(text: str) -> bool:
     for char in text.upper():
         if char == " ":  # spaces are fine
             continue
-        if char not in ALPHA_MORSE:
+        if char not in MORSE_MAP:
             raise ValueError(f"Unsupported character in text: '{char}'")
     return True
