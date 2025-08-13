@@ -10,6 +10,7 @@ Conversion Rules:
   - According to project policy, Morse code sequences not defined in TEXT_MAP will raise a ValueError.
   """
 
+import re
 from src.mappings.morse_map import TEXT_MAP
 
 def morse_to_alpha(morse_code: str) -> str:
@@ -25,17 +26,18 @@ def morse_to_alpha(morse_code: str) -> str:
     Raises:
         ValueError: If the input contains Morse code sequences not defined in TEXT_MAP.
     """
-    
-    words = morse_code.strip().split(' / ')  # Split words by slashes
+    # Split words on slashes with optional spaces
+    words = re.split(r'\s*/\s*', morse_code.strip())
     decoded_words = []
 
     for morse_word in words:
-        letters = morse_word.split(' ')  # Split letters by spaces
+        letters = morse_word.split(' ')
         decoded_letters = []
-        for code in letters:
-            if code in TEXT_MAP:
-                decoded_letters.append(TEXT_MAP[code])
+        for morse_char in filter(None, letters):  # Skip empty splits
+            if morse_char in TEXT_MAP:
+                decoded_letters.append(TEXT_MAP[morse_char])
             else:
-                raise ValueError(f"Unsupported Morse code sequence: '{code}'")
+                raise ValueError(f"Unsupported Morse code sequence: '{morse_char}'")
         decoded_words.append(''.join(decoded_letters))
-    return ' '.join(decoded_words)  # Join words with spaces
+
+    return ' '.join(decoded_words)
