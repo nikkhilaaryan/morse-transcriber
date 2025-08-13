@@ -13,7 +13,7 @@ from src.mappings.morse_map import MORSE_MAP
 
 def alpha_to_morse(text: str) -> str:
     """
-    Converts a plain test string to Morse code.
+    Converts a plain text string to Morse code.
     Args:
         text (str): The input string to convert.
         
@@ -23,19 +23,16 @@ def alpha_to_morse(text: str) -> str:
     Raises:
         ValueError: If the input contains characters not defined in MORSE_MAP.
     """
-
-    text = text.uppper()  # Convert to uppercase for consistency
+    text = text.upper()  # Convert to uppercase for consistency
     morse_words = []
-    for words in text.split(" "):
+
+    for word in text.split(" "):
         morse_chars = []
-        for char in words:
-            # Check if the character is in the Morse map
+        for char in word:
             if char in MORSE_MAP:
                 morse_chars.append(MORSE_MAP[char])
             else:
                 raise ValueError(f"Character '{char}' not defined in Morse code mapping.")
-        
-    return ' / '.join(morse_words)  # Join Morse code words with spaces
+        morse_words.append(" ".join(morse_chars))  # Append after each word
 
-
-
+    return " / ".join(morse_words)  # Slash between words
