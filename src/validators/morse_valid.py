@@ -14,7 +14,9 @@ Returns:
 - Raises ValueError or returns False (depending on mode) if invalid.
 """
 
-from src.mappings.morse_map import MORSE_MAP
+from src.converters.morse_alpha import morse_to_alpha
+from src.mappings.morse_map import TEXT_MAP
+
 
 def is_valid_morse(morse: str) -> bool:
     """
@@ -41,7 +43,7 @@ def is_valid_morse(morse: str) -> bool:
     for word in words:
         sequences = word.split(" ")
         for seq in sequences:
-            if seq and seq not in MORSE_MAP:
+            if seq and seq not in TEXT_MAP:
                 raise ValueError(f"Unsupported Morse code sequence: '{seq}'")
 
     return True
