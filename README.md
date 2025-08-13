@@ -5,7 +5,6 @@
 **morse-transcriber** is a command-line interface (CLI) application developed in Python for the bidirectional conversion between alphanumeric text and International Morse code. 
 ---
 **Disclaimer**: This software is in active development and may undergo significant architectural or functional changes. Features, APIs, and documentation are subject to modification without prior notice.
----
 ## Features:
 - **Bidirectional Conversion**:  
   - Text to Morse code  
