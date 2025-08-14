@@ -18,7 +18,8 @@ dependencies = ["pyperclip>=1.8.0"]
 Repository = "https://github.com/nikkhilaaryan/morse-transcriber"
 
 [project.scripts]
-morse-transcriber = "src.interfaces.cli:main"
+morse-transcriber = "morse_transcriber.main:main"
+
 
 [tool.pytest.ini_options]
 pythonpath = [
