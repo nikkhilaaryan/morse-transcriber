@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -19,3 +19,11 @@ Repository = "https://github.com/nikkhilaaryan/morse-transcriber"
 
 [project.scripts]
 morse-transcriber = "src.interfaces.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "."
+]
+testpaths = [
+    "tests"
+]
