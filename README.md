@@ -59,7 +59,7 @@ Example
 morse-transcriber CLI
 1. Text to Morse
 2. Morse to Text
-3. Exit
+3. morse-transcriber terminated
 Enter choice (1/2/3): 1
 Enter text: SOS
 Morse-Code: ... --- ...
