@@ -1,7 +1,7 @@
 # tests/test_validators/test_morse_valid.py
 import pytest
-from src.validators.morse_valid import is_valid_morse
-from src.mappings.morse_map import TEXT_MAP
+from morse_transcriber.validators.morse_valid import is_valid_morse
+from morse_transcriber.mappings.morse_map import TEXT_MAP
 
 
 # Valid Morse code tests
