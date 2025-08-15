@@ -1,0 +1,53 @@
+site_name: morse-transcriber Documentation
+site_url: https://nikkhilaaryan.github.io/morse-transcriber/
+site_description: Documentation for the morse-transcriber CLI tool
+site_author: Aryan Raj
+
+# Repository info (shows edit/view links on pages)
+repo_name: nikkhilaaryan/morse-transcriber
+repo_url: https://github.com/nikkhilaaryan/morse-transcriber
+
+# Theme config
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: blue
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.instant
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+
+# Plugins
+plugins:
+  - search
+
+# Navigation
+nav:
+  - Home: index.md
+  - Usage:
+      - Installation: usage/installation.md
+      - Commands: usage/commands.md
+  - Development:
+      - Contributing: development/contributing.md
+      - Changelog: development/changelog.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
