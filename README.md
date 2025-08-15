@@ -1,8 +1,13 @@
 
 # morse-transcriber
 
-## Overview
+# Overview
 **morse-transcriber** is a command-line interface (CLI) application developed in Python for the bidirectional conversion between alphanumeric text and International Morse code. 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/nikkhilaaryan/morse-transcriber/blob/main/LICENSE)
+![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)
+![Cross-Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)
+
 ---
 **Disclaimer**: This software is in active development and may undergo significant architectural or functional changes. Features, APIs, and documentation are subject to modification without prior notice.
 ## Features:
@@ -52,7 +57,7 @@ This is recommended for users performing multiple conversions in one session.
 
 **Command:**
 ```bash
-python -m src.main
+morse-transcriber
 ```
 Example
 ```
