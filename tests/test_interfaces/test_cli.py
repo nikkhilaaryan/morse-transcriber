@@ -1,9 +1,10 @@
 # tests/test_interfaces/test_cli.py
 import pytest
 from unittest import mock
-from src.interfaces.cli import main, run_interactive_menu, copy_to_clipboard
-from src.converters.alpha_morse import alpha_to_morse
-from src.converters.morse_alpha import morse_to_alpha
+from unittest.mock import patch
+from morse_transcriber.interfaces.cli import main, run_interactive_menu, copy_to_clipboard
+from morse_transcriber.converters.alpha_morse import alpha_to_morse
+from morse_transcriber.converters.morse_alpha import morse_to_alpha
 
 
 # Test copy_to_clipboard
@@ -20,7 +21,7 @@ def test_copy_to_clipboard(monkeypatch):
 # Test main CLI with --text argument
 # -----------------------------
 @mock.patch("builtins.print")
-@mock.patch("src.interfaces.cli.copy_to_clipboard")
+@mock.patch("morse_transcriber.interfaces.cli.copy_to_clipboard")
 def test_text_argument(mock_copy, mock_print, monkeypatch):
     monkeypatch.setattr("sys.argv", ["morse-transcriber", "--text", "SOS"])
     main()
@@ -32,7 +33,7 @@ def test_text_argument(mock_copy, mock_print, monkeypatch):
 # Test main CLI with --morse argument
 # -----------------------------
 @mock.patch("builtins.print")
-@mock.patch("src.interfaces.cli.copy_to_clipboard")
+@mock.patch("morse_transcriber.interfaces.cli.copy_to_clipboard")
 def test_morse_argument(mock_copy, mock_print, monkeypatch):
     monkeypatch.setattr("sys.argv", ["morse-transcriber", "--morse", "... --- ..."])
     main()
