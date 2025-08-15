@@ -1,6 +1,6 @@
 # tests/test_mappings/test_map.py
 import pytest
-from src.mappings.morse_map import MORSE_MAP, TEXT_MAP
+from morse_transcriber.mappings.morse_map import MORSE_MAP, TEXT_MAP
 
 def test_basic_letter_mapping():
     # Test a few letters
