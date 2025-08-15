@@ -8,9 +8,10 @@
 ![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)
 ![Cross-Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)
 
----
+
 **Disclaimer**: This software is in active development and may undergo significant architectural or functional changes. Features, APIs, and documentation are subject to modification without prior notice.
-** Documentation:** [morse-transcriber full documentation](https://nikkhilaaryan.github.io/morse-transcriber/) 
+
+ Documentation: [morse-transcriber Documentation](https:/nikkhilaaryan.github.io/morse-transcriber/) 
 
 ## Features:
 - **Bidirectional Conversion**:  
