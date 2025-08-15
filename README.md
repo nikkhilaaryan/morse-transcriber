@@ -11,7 +11,7 @@
 
 **Disclaimer**: This software is in active development and may undergo significant architectural or functional changes. Features, APIs, and documentation are subject to modification without prior notice.
 
- Documentation: [morse-transcriber Documentation](https:/nikkhilaaryan.github.io/morse-transcriber/) 
+ Documentation: [morse-transcriber Documentation](https://nikkhilaaryan.github.io/morse-transcriber/) 
 
 ## Features:
 - **Bidirectional Conversion**:  
