@@ -1,7 +1,7 @@
 # tests/test_converters/test_morse_alpha.py
 import pytest
-from src.converters.morse_alpha import morse_to_alpha
-from src.mappings.morse_map import TEXT_MAP
+from morse_transcriber.converters.morse_alpha import morse_to_alpha
+from morse_transcriber.mappings.morse_map import TEXT_MAP
 
 def test_single_word():
     # Simple Morse word
