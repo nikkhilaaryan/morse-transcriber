@@ -1,8 +1,7 @@
 # tests/test_validators/test_alpha_valid.py
 import pytest
-from src.validators.alpha_valid import is_valid_alpha
-from src.mappings.morse_map import MORSE_MAP
-
+from morse_transcriber.validators.alpha_valid import is_valid_alpha
+from morse_transcriber.mappings.morse_map import MORSE_MAP
 
 # Valid input tests
 # ---------------------------------------
